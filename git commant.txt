@@ -1,3 +1,6 @@
-git init  ////ProgrammerBirk@DESKTOP-EMJKJOG MINGW64 /c/AppServ/www/un (master)
+git init  ////ProgrammerBirk@DESKTOP-EMJKJOG MINGW64 /c/AppServ/www/un (master) // do in frist time only
 git add . /// add all file to form this project un to master file to upload may be
-git commit -m 'first commit ' //this save your project and commented it
+git commit -m "first commit "   ///this save your project and commented it
+git remote add origin https://github.com/birkborkan/un.git   ///do in fist when its not now you
+git push origin   master /// use in secon commit or over her its now you
+ 
