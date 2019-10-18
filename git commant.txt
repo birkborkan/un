@@ -1,0 +1,3 @@
+git init  ////ProgrammerBirk@DESKTOP-EMJKJOG MINGW64 /c/AppServ/www/un (master)
+git add . /// add all file to form this project un to master file to upload may be
+git commit -m 'first commit ' //this save your project and commented it
