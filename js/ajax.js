@@ -27,12 +27,12 @@ function login() {
   }
 
 
-  function give_pages(url) {
+  function give_pages(url,titlee) {
    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById('titley').innerHTML = "إضافة كلية جديدة";
+        document.getElementById('titley').innerHTML = titlee;
         document.getElementById('contenty').innerHTML = this.responseText;
       }else{
         document.getElementById('titley').innerHTML = "<img src='img/ajax-loader.gif'/> &nbsp; جاري جلب البيانات ........";

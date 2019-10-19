@@ -59,7 +59,24 @@
  ul {
   
     padding-inline-start: 0px;
+} 
+.dropdown-menu  li{
+  background:#8bd7ed;
+  border:1px solid #eee;
+  border-radius:20px;
+  padding:2px;
 }
+.dropdown-menu li:hover{
+  background:#3271e4;
+  
+  
+}
+.dropdown-menu li a:hover{
+   
+  color:white;
+  
+}
+ 
 </style>
 
 </head>
@@ -81,15 +98,15 @@ Darfur University College
 </div>
     <div class="dropdown" style='float:right;'>
     
-    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">Tutorials
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">التحكم
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
-      <li role="presentation"><a role="menuitem" tabindex="-1"
-       onclick='return false;' onmousedown="give_pages('add_fac.php');" href="#">إضافة كلية</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+      <li class='li_hover' role="presentation"  onclick='return false;' onmousedown="give_pages('add_fac.php',' إضافة كلية جديدة');"><a role="menuitem" tabindex="-1"
+       href="#">إضافة كلية</a></li>
+      <li class='li_hover'role="presentation" onclick='return false;' onmousedown="give_pages('add_new_depart.php','إضافة قسم جديد');"><a role="menuitem" tabindex="-1" href="#">إضافة قسم</a></li>
+      <li class='li_hover' role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li class='li_hover' role="presentation" class="divider"></li>
+      <li class='li_hover' role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
     </ul>
   </div>
    <div class="dropdown" style='float:right;'>
