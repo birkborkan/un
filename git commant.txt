@@ -3,4 +3,4 @@ git add . /// add all file to form this project un to master file to upload may 
 git commit -m "first commit "   ///this save your project and commented it
 git remote add origin https://github.com/birkborkan/un.git   ///do in fist when its not now you
 git push origin   master /// use in secon commit or over her its now you
- 
+git pull origin master /// git updated from your friend 
