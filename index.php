@@ -84,7 +84,8 @@ Darfur University College
     <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">Tutorials
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1"
+       onclick='return false;' onmousedown="give_pages('add_fac.php');" href="#">إضافة كلية</a></li>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
       <li role="presentation" class="divider"></li>
@@ -341,18 +342,7 @@ Darfur University College
                   <div id='titley'>
                   <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
 </div>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
