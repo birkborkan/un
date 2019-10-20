@@ -13,7 +13,7 @@ echo '<table class="table">
     <th scope="col">اسم الكلية</th>
     <th scope="col">القسم</th>
     <th scope="col">رمز القسم</th>
-    <th scope="col"> تعديل</th>
+    <th scope="col"> حذف</th>
   </tr>
 </thead>
 <tbody>';
@@ -23,10 +23,10 @@ while($rows = mysqli_fetch_array($select)){
 echo '
 <tr>
 <th scope="row">'.$counter.'</th>
-<td>'.$rows['fac_name'].'</td>
-<td>'.$rows['depart_name'].'</td>
+<td id="face_name_delete'.$rows['id'].'">'.$rows['fac_name'].'</td>
+<td id="depart_name_delete'.$rows['id'].'">'.$rows['depart_name'].'</td>
 <td>'.$rows['depart_asign'].'</td>
-<td><span class="btn btn-success" onclick="edit_depart('.$rows['id'].')">تعديل</span></td>
+<td><span class="btn btn-danger" onclick="delete_depart('.$rows['id'].')">حذف</span></td>
  
 </tr>
 ';

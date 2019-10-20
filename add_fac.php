@@ -2,12 +2,7 @@
 
 
 
-
- 
-        <!-- Nested Row within Card Body -->
-     
-                
-                  
+   
                    
                   <form  >
                     <input type="text" class="form-control "   id="fac_name" placeholder="رجاء ادخال اسم الكلية هنا ...">
