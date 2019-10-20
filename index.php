@@ -104,7 +104,7 @@ Darfur University College
       <li class='li_hover' role="presentation"  onclick='return false;' onmousedown="give_pages('add_fac.php',' إضافة كلية جديدة');"><a role="menuitem" tabindex="-1"
        href="#">إضافة كلية</a></li>
       <li class='li_hover'role="presentation" onclick='return false;' onmousedown="give_pages('add_new_depart.php','إضافة قسم جديد');"><a role="menuitem" tabindex="-1" href="#">إضافة قسم</a></li>
-      <li class='li_hover' role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_depart.php',' تعديل بيانات الاقسام ');"><a role="menuitem" tabindex="-1" href="#">تعديل قسم</a></li>
       <li class='li_hover' role="presentation" class="divider"></li>
       <li class='li_hover' role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
     </ul>
