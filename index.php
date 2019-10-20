@@ -63,19 +63,20 @@
 .dropdown-menu  li{
   background:#8bd7ed;
   border:1px solid #eee;
-  border-radius:20px;
-  padding:2px;
+  border-top-left-radius:50%;
+  border-bottom-left-radius:50%;
+  
 }
 .dropdown-menu li:hover{
-  background:#3271e4;
+  background:#00ffff;
   
   
 }
 .dropdown-menu li a:hover{
-   
-  color:white;
-  
+  padding-bottom:20px;
+  color:#ff8080;  
 }
+ 
  
 </style>
 
@@ -98,19 +99,29 @@ Darfur University College
 </div>
     <div class="dropdown" style='float:right;'>
     
-    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">التحكم
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارة الكليات 
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
       <li class='li_hover' role="presentation"  onclick='return false;' onmousedown="give_pages('add_fac.php',' إضافة كلية جديدة');"><a role="menuitem" tabindex="-1"
        href="#">إضافة كلية</a></li>
-      <li class='li_hover'role="presentation" onclick='return false;' onmousedown="give_pages('add_new_depart.php','إضافة قسم جديد');"><a role="menuitem" tabindex="-1" href="#">إضافة قسم</a></li>
-      <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_depart.php',' تعديل بيانات الاقسام ');"><a role="menuitem" tabindex="-1" href="#">تعديل قسم</a></li>
+
       <li class='li_hover' role="presentation" class="divider"></li>
       <li class='li_hover' role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
     </ul>
   </div>
    <div class="dropdown" style='float:right;'>
-    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">Tutorials
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارةالاقسام
+    <span class="caret"></span></div>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
+    <li class='li_hover'role="presentation" onclick='return false;' onmousedown="give_pages('add_new_depart.php','إضافة قسم جديد');"><a role="menuitem" tabindex="-1" href="#">إضافة قسم</a></li>
+      <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_depart.php',' تعديل بيانات الاقسام ');"><a role="menuitem" tabindex="-1" href="#">تعديل قسم</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>
+          <div class="dropdown" style='float:right;'>
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">الفصل الدراسي
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
@@ -121,7 +132,7 @@ Darfur University College
     </ul>
   </div>
           <div class="dropdown" style='float:right;'>
-    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">Tutorials
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارة الطلاب
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
@@ -130,9 +141,31 @@ Darfur University College
       <li role="presentation" class="divider"></li>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
     </ul>
-  </div>
-          <div class="dropdown" style='float:right;'>
-    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">Tutorials
+  </div>      
+    <div class="dropdown" style='float:right;'>
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارة النتائج
+    <span class="caret"></span></div>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>    
+   <div class="dropdown" style='float:right;'>
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارة الرسوم
+    <span class="caret"></span></div>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+  </div>   
+  <div class="dropdown" style='float:right;'>
+    <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">التقارير
     <span class="caret"></span></div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style='text-align:right;'>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
