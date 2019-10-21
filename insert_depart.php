@@ -9,9 +9,15 @@ $fac_name = $_POST['fac_name'];
 $depart_name = $_POST['depart_name'];
 $depart_asign = $_POST['depart_asign'];
  if($fac_name and $depart_asign and $depart_name){
-    $select = mysqli_query($connect,"select * from depart_table where fac_name = '$fac_name' and depart_name='$depart_name'");
+    $select = mysqli_query($connect,"select * from depart_table where fac_name = '$fac_name' and depart_name='$depart_name'  ");
     if(mysqli_num_rows($select) >0){
-        echo "find_depart";
+        $rows = mysqli_fetch_array($select);
+        if($rows['status'] == 0){
+            echo "find_depart";
+        }else if($rows['status'] == 1){
+              echo "deleted";
+        }
+        
     }else{
         $insert = mysqli_query($connect,"insert into depart_table(fac_name,depart_name,depart_asign) values('$fac_name','$depart_name','$depart_asign')");
         echo "done";

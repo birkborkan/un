@@ -91,7 +91,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion col-xs-12"  style='float:right;'id="accordionSidebar">                                   
    
     <div class="  bro">
-    <img src="img/images.jpg" width='50%'  style='float:right;'alt="" class='col-md-5 col-xs-12'>
+    <img src="img/images.jpg" width='50%' class='rotate-15' style='float:right;'alt="" class='col-md-5 col-xs-12'>
      
     
   

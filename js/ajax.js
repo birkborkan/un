@@ -80,6 +80,10 @@ if(fac_name === ""){
         document.getElementById('titley').innerHTML ="إضافة قسم  جديد";
         alert("هذا القسم موجودة مسبقآ");
       } 
+      else if(this.responseText === "deleted"){
+        document.getElementById('titley').innerHTML ="إضافة قسم  جديد";
+        alert("هذا القسم تم حذفه مسبقآ لإرجاعه اذهب الي ارشيف النظام");
+      }
       }else{
         document.getElementById('titley').innerHTML = "<img src='img/ajax-loader.gif'/> &nbsp; جاري المعالجة...  ";
       }
@@ -148,6 +152,7 @@ alert("رجاء ملي جميع الحقول");
     if (this.readyState == 4 && this.status == 200) {
       if(this.responseText ==="done"){
       document.getElementById('titley').innerHTML = "<span style='color:green;'> تم حذف القسم بنجاح  </span>";
+      give_pages('show_all_depart_delete.php',' حذف الاقسام');
     }  
     }else{
       document.getElementById('titley').innerHTML = "<img src='img/ajax-loader.gif'/> &nbsp; جاري المعالجة...  ";
