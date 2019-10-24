@@ -9,12 +9,22 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Charts</title>
+  <title>كلية دارفور الجامعية</title>
 
+  <!-- calender-->
+
+  
+    <!-- Bootstrap -->
+  
+    <!-- Respomsive slider -->
+    <link href="css/responsive-calendar.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+ <!-- clock style-->
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/demo.css"/>
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   
@@ -77,26 +87,108 @@
   color:#ff8080;  
 }
  
+ .down_from_top{
+  background: #01fec5;
+    color: white;
+    position: fixed;
+    right: 200px;
+    width: 250px;
+    opacity:0.6;
+    top: 0px;
+    text-align: right;
+    padding: 5px;
+    border-radius: 6px;
+    z-index:100;
+
  
+  
+  }
+  .dropdown-toggle::after {
+    display: none;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+ 
+@media (min-width: 380px){
+  .bro {
+    font-size: 14px;
+    
+}
+.clock{
+  text-align:center;
+}
+.bro>img{
+  margin-top:15px;
+  
+  margin-right:12px;
+}
+}
+@media (max-width: 780px){
+ 
+.bro>img {
+    height:50px;
+    margin-top:7px;
+    
+} 
+.clock{
+  text-align:right;
+}
+.logo_text{
+    
+    margin-top:10px;
+    
+}}
+ 
+ 
+.clock_in{
+  width:auto;
+  height:400px;
+ 
+  right:1px;
+
+
+   
+}
+canvas{
+  width:auto;
+  
+   
+   
+
+
+   
+}
 </style>
 
 </head>
 
 <body id="page-top"   dir='rtl' >
-
+<div class="down_from_top" id="down_from_top" style='display:none;'>
+  <div><a href='#' class='hide_show' style='color:red;'onclick='return false;' >x</a></div>
+  <div class='drop_value'> </div>
+  
+  </div>
   <!-- Page Wrapper -->
-  <div id="wrapper">
+  <div id="wrapper" >
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion col-xs-12"  style='float:right;'id="accordionSidebar">                                   
    
-    <div class="  bro">
-    <img src="img/images.jpg" width='50%' class='rotate-15' style='float:right;'alt="" class='col-md-5 col-xs-12'>
+    <div class="  bro" >
+    <img src="img/images.jpg" id='seventyfive' width='50%' class='rotate-15  ' style='float:right;margin-right:10px;'alt="" class='col-md-5 col-xs-12'>
      
     
-  
-Darfur University College 
+  <br>
+  <br>
+  <br>
+<span class='logo_text'>Darfur University College </span>
 </div>
+<div></div>
     <div class="dropdown" style='float:right;'>
     
     <div class="btn btn-default dropdown-toggle bro" type="button" id="menu1" data-toggle="dropdown">ادارة الكليات 
@@ -116,7 +208,8 @@ Darfur University College
     <li class='li_hover'role="presentation" onclick='return false;' onmousedown="give_pages('add_new_depart.php','إضافة قسم جديد');"><a role="menuitem" tabindex="-1" href="#">إضافة قسم</a></li>
       <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_depart.php',' تعديل بيانات الاقسام ');"><a role="menuitem" tabindex="-1" href="#">تعديل قسم</a></li>
       <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_depart_delete.php',' حذف الاقسام');"><a role="menuitem" tabindex="-1" href="#">حذف قسم</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li class='li_hover' role="presentation" onclick='return false;' onmousedown="give_pages('show_all_department.php','  عرض الاقسام  ');"><a role="menuitem" tabindex="-1" href="#"> عرض الاقسام</a></li>
+ 
       <li role="presentation" class="divider"></li>
       <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
     </ul>
@@ -193,7 +286,7 @@ Darfur University College
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style='background:blue;'>
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -231,11 +324,7 @@ Darfur University College
 
             <!-- Nav Item - Alerts -->
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
-              </a>
+         
               <!-- Dropdown - Alerts -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
@@ -280,11 +369,8 @@ Darfur University College
 
             <!-- Nav Item - Messages -->
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
+             
+     
               <!-- Dropdown - Messages -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
@@ -339,8 +425,8 @@ Darfur University College
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Setting</span>
+                <img class="img-profile rounded-circle" src="img/images.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -374,7 +460,7 @@ Darfur University College
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">كلية دارفور الجامعية</h1>
+            <h1 class="h3 mb-0 text-gray-800" style='font-family:tahoma;'>كلية دارفور الجامعية</h1>
             <a href="#" 
            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             <i class="fas fa-home fa-sm text-white-50"></i>الرئيسية</a>
@@ -391,14 +477,35 @@ Darfur University College
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <div id='titley'>
-                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                  <h6 class="m-0 font-weight-bold text-primary"> الوقــــــــــت</h6>
 </div>
                   
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div id='contenty'>
-                   card birk ..................
+ 
+ 
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+ 
+google_ad_width = 228;
+google_ad_height = 90;
+//-->
+</script>
+ 
+    
+    </div>
+<div class="jquery-script-clear"></div>
+
+
+    <div class="wrapper clearfix show text-right">
+       <div class='clock_in'> <div class="clock" id="clock" style='width:100%; height:100%;'></div></div>
+         
+         
+    </div>
                 </div>
                 </div>
               </div>
@@ -409,24 +516,34 @@ Darfur University College
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  <h6 class="m-0 font-weight-bold text-primary" id='titley2'>التقويم</h6>
+                
                 </div>
                 <!-- Card Body -->
-                <div class="card-body">
-                      card small
-                 
+                <div class="card-body" style='height:530px;' id='contenty2'>
+                    
+      <!-- Responsive calendar - START -->
+    	<div class="responsive-calendar">
+        <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+        </div><hr/>
+        <div class="day-headers">
+          <div class="day header">Mon</div>
+          <div class="day header">Tue</div>
+          <div class="day header">Wed</div>
+          <div class="day header">Thu</div>
+          <div class="day header">Fri</div>
+          <div class="day header">Sat</div>
+          <div class="day header">Sun</div>
+        </div>
+        <div class="days" data-group="days">
+          
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+  
                 </div>
               </div>
             </div>
@@ -436,48 +553,9 @@ Darfur University College
           <div class="row">
 
             <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
+ 
 
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                </div>
-       
-              </div>
-
-    
-
-            </div>
-
-            <div class="col-lg-6 mb-4">
-
-              <!-- Illustrations -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
-                  </div>
             
-                </div>
-              </div>
-
-              <!-- Approach -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                </div>
-                <div class="card-body">
-                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -488,7 +566,7 @@ Darfur University College
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
-          <div class="copyright text-center my-auto">
+          <div class="copyright text-center my-auto" style='height:150px;border:2px solid #eee;padding-top:8px;'>
             <span>Copyright &copy; Your Website 2019</span>
           </div>
         </div>
@@ -526,22 +604,73 @@ Darfur University College
   </div>
 
   <!-- Bootstrap core JavaScript-->
-
-  <script src="js/ajax.js"></script>
+  
+  
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".responsive-calendar").responsiveCalendar({
+          time: '2019-01',
+          events: {
+            "2019-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+            "2019-04-26": {"number": 1, "url": "http://w3widgets.com"}, 
+            "2019-05-03":{"number": 1}, 
+            "2019-06-12": {}}
+        });
+      });
+    </script>
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-
+  <script src="js/ajax.js"></script>
   <!-- Page level plugins -->
  
-
-  <!-- Page level custom scripts -->
   
+  <!-- jquery clock plugin-->
+  
+<script type="text/javascript" src="js/clock-1.1.0.min.js"></script>
+<script>
+
+    var clock = $("#clock").clock(),
+        data = clock.data('clock');
+
+    // data.pause();
+    // data.start();
+    // data.setTime(new Date());
+
+    var d = new Date();
+    d.setHours(9);
+    d.setMinutes(51);
+    d.setSeconds(20);
+
+    var clock1 = $("#clock1").clock({
+        theme: 't2',
+        date: d
+    });
+
+    var clock2 = $("#clock2").clock({
+        theme: 't3'
+    });
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </body>
 

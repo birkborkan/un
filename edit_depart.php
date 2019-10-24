@@ -6,15 +6,20 @@ include "conn.php";
 
 
 $edit_depart_id = $_POST['edit_depart_id'];
+ 
 if($edit_depart_id){
  
  
     $select = mysqli_query($connect,"select * from depart_table where id = '$edit_depart_id'");
+    $select2 = mysqli_query($connect,"select fac_name from depart_table where id = '$edit_depart_id'");
     if(mysqli_num_rows($select) >0){
 
         $row2 = mysqli_fetch_array($select);
+        $row3 = mysqli_fetch_array($select2);
+        $edit_depart_name = $row3['fac_name'];
+       
         ?>
-
+  
           
 <form  style='text-align:right;'>
                     اسم الكلية :
@@ -22,16 +27,25 @@ if($edit_depart_id){
                    <?php
                    $select  = mysqli_query($connect,"select * from fac_table");
                    if(mysqli_num_rows($select)>0){
+
+                    
                          echo "<select style='width:100%;' id='fac_name2'>";
                          while($rows = mysqli_fetch_array($select)){
-                            echo " <option> ".$rows['fac_name']." </option>";
-                         }
+                          
+                            if($edit_depart_name == $rows['fac_name'])
+                            {
+                                
+                               echo " <option  selected> ".$rows['fac_name']." </option>";
+                            }
+                            else{
+                            echo " <option > ".$rows['fac_name']." </option>";
+                         }}
                         
                          echo"
                          </select>
                          ";
                    }else{
-                   echo "<select>
+                   echo "
                        <option>لا توجد كلية مضافة في النظام</option>
                        </select>
                        ";

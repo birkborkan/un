@@ -28,6 +28,8 @@
                     </div>
                     اسم القسم:
                     <input type="text" class="form-control "   id="depart_name" placeholder="">
+                     عدد الفصول :
+                    <input type="text" class="form-control "   id="sem_no" placeholder="">
                     رمز القسم:
                     <input type="text" class="form-control " id='depart_asign'   placeholder='هذا الرمز خاص بقسم معين ولا يمكن تكراره 
                     رجاء اختياره بعناية مثلآ CS, IT الخ ......'>
